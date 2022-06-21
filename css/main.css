@@ -119,8 +119,7 @@ margin-top: 0;
   border: 2px solid #DEDEDE;
   border-radius: 5px;
   background-color: var(--main-color-white);
-  margin-top:20px;
-  margin-bottom: 6px;
+
   font-weight: 600;
 font-size: 14px;
 line-height: 26px;
@@ -185,12 +184,14 @@ label {
   font-weight: 500;
 font-size: 11px;
 line-height: 16px;
+font-style: italic;
 
 }
 .forms .form-right .form .label {
 text-align: right;
-width: 460px;
-font-style: italic;
+margin-bottom:20px;
+
+
 }
 
 @media (max-width:700px) {
