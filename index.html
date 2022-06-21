@@ -19,10 +19,14 @@
         <div class="form-right">
           <button class="btn" > <strong>Try it free 7 days </strong> then $20/mo. thereafter</button>
           <form class="form" action="https://echo.htmlacademy.ru/courses" method="post" autocomplete="off">
-            <input type="text" placeholder="Forst name" name="forst-name">
-            <input type="text" placeholder="Last name" name="last-name">
-            <input type="email" placeholder="Emaile address" name="email">
-            <input type="password" placeholder="Password" name="password">
+            <input type="text" id="forst-name" minlength="2" placeholder="Forst name" name="forst-name">
+            <div class="label"> <label for="forst-name">First Name cannot be empty</label></div>
+            <input type="text" id="last-name" minlength="2" placeholder="Last name" name="last-name">
+            <div class="label"> <label for="forst-name">Last Name cannot be empty</label></div>
+            <input type="email" id="email" minlength="2" placeholder="Emaile address" name="email">
+            <div class="label"> <label for="forst-name">Looks like this is not an email</label></div>
+            <input type="password" id="password" minlength="4" maxlength="8" placeholder="Password" name="password">
+            <div class="label"> <label for="forst-name">Password cannot be empty</label></div>
             <button type="submit" class="btn">CLAIM YOUR FREE TRIAL</button>
             <p class="text">By clicking the button, you are agreeing to our <a class="link" href="#">Terms and Services</a></p>
           </form>

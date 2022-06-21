@@ -10,39 +10,39 @@
 
 /* poppins-regular - latin */
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  src: local(''),
-       url('../fonts/poppins-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/poppins-v20-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(""),
+       url("../fonts/poppins-v20-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url("../fonts/poppins-v20-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* poppins-500 - latin */
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
-  src: local(''),
-       url('../fonts/poppins-v20-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/poppins-v20-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(""),
+       url("../fonts/poppins-v20-latin-500.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url("../fonts/poppins-v20-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* poppins-600 - latin */
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  src: local(''),
-       url('../fonts/poppins-v20-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/poppins-v20-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(""),
+       url("../fonts/poppins-v20-latin-600.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url("../fonts/poppins-v20-latin-600.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* poppins-700 - latin */
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
-  src: local(''),
-       url('../fonts/poppins-v20-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/poppins-v20-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(""),
+       url("../fonts/poppins-v20-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url("../fonts/poppins-v20-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 *{
   box-sizing: border-box;
@@ -87,6 +87,7 @@ body {
   width: 540px;
 }
 .forms .form-right .btn {
+
   padding: 17px 110px;
   background-color: var(--main-color-blue);
   color: var(--main-color-white);
@@ -107,15 +108,19 @@ font-weight: 700;
   background-color: var(--main-color-white);
   border-radius: 10px;
 }
+.forms .form-right .form input:nth-child(1){
+margin-top: 0;
+}
 .forms .form-right .form input {
   outline: none;
   display: block;
   width: 100%;
-  padding: 15px 32px;
+  padding: 15px 72px 15px 32px;
   border: 2px solid #DEDEDE;
   border-radius: 5px;
   background-color: var(--main-color-white);
-  margin-bottom:20px;
+  margin-top:20px;
+  margin-bottom: 6px;
   font-weight: 600;
 font-size: 14px;
 line-height: 26px;
@@ -137,6 +142,7 @@ align-self: var(--main-color-blue);
   box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
   border-radius: 5px;
   margin-bottom: 10px;
+  margin-top: 19px;
 }
 .forms .form-right .form .text {
   font-weight: 500;
@@ -151,6 +157,40 @@ text-decoration: none;
 color: var(--main-color-red);
 font-weight: 700;
 
+}
+input:not(:placeholder-shown):not(:focus):invalid {
+  border: 2px solid #FF7979;
+  border-radius: 5px;
+  color: #FF7979;
+  background-image: url("../images/Group.svg");
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: right 25px center;
+}
+input:not(:placeholder-shown):not(:focus):valid {
+  border: 2px solid #38CC8B;
+  border-radius: 10px;
+  background-image: url("../images/check.png");
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: right 25px center;
+}
+input:not(:placeholder-shown):not(:focus):invalid + .label label{
+color: #FF7979;
+
+}
+
+label {
+  color: transparent;
+  font-weight: 500;
+font-size: 11px;
+line-height: 16px;
+
+}
+.forms .form-right .form .label {
+text-align: right;
+width: 460px;
+font-style: italic;
 }
 
 @media (max-width:700px) {
